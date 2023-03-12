@@ -1,5 +1,5 @@
 pipeline{
-    agent{ lable ('jfrog_1') }
+    agent{ label ('jfrog_1') }
     stages{
          stage('vcs'){
             steps{
