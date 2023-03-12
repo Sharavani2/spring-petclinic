@@ -26,7 +26,7 @@ pipeline{
           }
           stage('deployment'){
             steps{
-                sh 'ansible -i hosts spc-project.yaml'
+                sh 'ansible-playbook -i hosts spc-project.yaml'
             }
           }
 
