@@ -15,14 +15,13 @@ pipeline{
             steps{
                  archiveArtifacts artifacts : '**/spring-petclinic-3.0.0-SNAPSHOT.jar'
                                   junit '**/*.xml'
-
             }
          }
           stage('craeting folder'){
             steps{
                 sh "mkdir -p /tmp/${JOB_NAME}/${BUILD_ID}"
                 sh "cp -r **/spring-petclinic-*.jar /tmp/${JOB_NAME}/${BUILD_ID}"
-                sh "aws s3 sync /tmp/${JOB_NAME}/${BUILD_ID} s3://jenkins789"
+                sh "aws s3 sync /tmp/${JOB_NAME}/${BUILD_ID} s3://jenkins789 --acl public-read-write"
             }
           }
 
