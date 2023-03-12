@@ -10,7 +10,7 @@
     - name: copy the service the file
        copy:
          src: /home/ubuntu/spc.service
-         dest: /lib/systemd/system/spc.service
+         dest: /etc/systemd/system/spc.service
          remote_src: yes
      - name: daemon reload
        systemd:
