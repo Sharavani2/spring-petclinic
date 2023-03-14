@@ -4,14 +4,14 @@
    become: yes
    tasks:
     - name: install spc
-       get_url:
-         url: 'https://jenkins789.s3.eu-west-3.amazonaws.com/spring-petclinic-3.0.0-SNAPSHOT.jar'
-         dest: /home/ubuntu
+      get_url:
+        url: 'https://jenkins789.s3.eu-west-3.amazonaws.com/spring-petclinic-3.0.0-SNAPSHOT.jar'
+        dest: /home/ubuntu
     - name: copy the service the file
-       copy:
-         src: /home/ubuntu/spc.service
-         dest: /etc/systemd/system/spc.service
-         remote_src: yes
+      copy:
+        src: /home/ubuntu/spc.service
+        dest: /etc/systemd/system/spc.service
+        remote_src: yes
      - name: daemon reload
        systemd:
          name: spc.service
