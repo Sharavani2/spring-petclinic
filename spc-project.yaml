@@ -12,9 +12,9 @@
         src: /home/ubuntu/spc.service
         dest: /etc/systemd/system/spc.service
         remote_src: yes
-     - name: daemon reload
-       systemd:
-         name: spc.service
-         daemon_reload: yes
-         state: started
-         enabled: yes
+    - name: daemon reload
+      systemd:
+        name: spc.service
+        daemon_reload: yes
+        state: started
+        enabled: yes
