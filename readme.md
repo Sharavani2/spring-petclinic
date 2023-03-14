@@ -38,7 +38,7 @@ Or you can run it from Maven directly using the Spring Boot Maven plugin. If you
 There is no `Dockerfile` in this project. You can build a container image (if you have a docker daemon) using the Spring Boot build plugin:
 
 ```
-./mvnw spring-boot:build-image
+./mvnw spring-boot:build-image             
 ```
 
 ## In case you find a bug/suggested improvement for Spring Petclinic
@@ -158,3 +158,8 @@ The Spring PetClinic sample application is released under version 2.0 of the [Ap
 [spring-petclinic-graphql]: https://github.com/spring-petclinic/spring-petclinic-graphql
 [spring-petclinic-kotlin]: https://github.com/spring-petclinic/spring-petclinic-kotlin
 [spring-petclinic-rest]: https://github.com/spring-petclinic/spring-petclinic-rest
+
+
+
+
+
