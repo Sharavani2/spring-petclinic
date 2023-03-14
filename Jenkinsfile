@@ -24,14 +24,14 @@ pipeline{
                 sh "aws s3 sync /tmp/${JOB_NAME}/${BUILD_ID} s3://jenkins789 --acl public-read-write"
             }
           }
-      agent{ label ( 'ansible_node1' )}
-      stages{
-        stage('deployment'){
-          steps{
+         stage( 'deployment'){
+           agent{ label ('ansible_node1') } 
+           steps{
             sh 'ansible-playbook -i hosts spc-project.yaml'
-          }
-        }
-      }
+           }
+
+         }
+         
 
     }
 
